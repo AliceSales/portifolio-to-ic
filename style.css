@@ -60,12 +60,24 @@ main {
   gap: 2rem;
 }
 
+.fab {
+  cursor: pointer;
+}
+
+.fab:hover {
+  color: crimson;
+}
+
 .fab::before {
   margin: 0 0.5rem;
 }
 
 .icons {
   border-radius: 1rem;
+}
+
+.icons:hover {
+  filter: contrast(0.8);
 }
 
 .photo {
@@ -100,7 +112,7 @@ main {
 }
 
 .active, .current_circle:hover {
-  background-color: #dfdfdf;
+  background-color: crimson;
 }
 
 .translate {
