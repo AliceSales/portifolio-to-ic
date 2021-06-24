@@ -14,7 +14,6 @@
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     color: rgb(255, 255, 255);
-    text-transform: capitalize;
 }
 
 a, ul {
@@ -35,12 +34,38 @@ main {
     padding-left: 5rem;
 }
 
-.slides .about__welcome {
+.slides .topic {
     height: 30%;
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.text {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+}
+
+.about__text {
+  line-height: 1.5rem;
+}
+
+.tecnologies__text {
+  width: 10%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fab::before {
+  margin: 0 0.5rem;
+}
+
+.icons {
+  border-radius: 1rem;
 }
 
 .photo {
@@ -53,9 +78,14 @@ main {
 
 /*CARROSSEL*/
 .circles {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0.5rem;
+  gap: 2rem;
 }
 
 .current_circle {
