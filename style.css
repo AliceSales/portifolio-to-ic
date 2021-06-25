@@ -64,13 +64,17 @@ main {
   gap: 2rem;
 }
 
-.hobbies__text {
+.hobbies__video {
+  width: 70%;
   display: flex;
-  flex: 1
+  flex-wrap: wrap;
+
 }
 
-.hobbies__text video {
-  width: 90%;
+.hobbies__video video {
+  width: 30%;
+  height: 48%;
+  border: 1px dashed gray;
   filter: grayscale(1);
 }
 
@@ -126,7 +130,7 @@ video:hover {
 }
 
 .card:hover span:nth-child(1) {
-  width: 10%;
+  width: 13%;
 }
 
 .card:hover span:nth-child(2) {
@@ -138,7 +142,7 @@ video:hover {
 }
 
 .card:hover span:nth-child(4) {
-  width: 10%;
+  width: 13%;
 }
 
 .card:hover .fab {
@@ -163,6 +167,8 @@ video:hover {
     top: 0;
     width: 30%;
     height: 100%;
+    filter: grayscale(1);
+    /*transform: rotateY(180deg);*/
 }
 
 /*CARROSSEL*/
@@ -184,8 +190,9 @@ video:hover {
   margin: 0 2px;
   background-color: rgb(92, 91, 91);
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
   transition: background-color, width 0.7s ease;
+  position: relative;
 }
 
 .active{
