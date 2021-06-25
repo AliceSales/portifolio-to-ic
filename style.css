@@ -26,31 +26,37 @@ h2 {
 }
 
 main {
-    width: 100%;
-    height: 100vh;
-    background: #070707;
+  width: 100%;
+  height: 100vh;
+  background: #070707;
 }
 
 .slides {
-    width: 100%;
-    height: 100vh;
-    display: none;
-    padding-left: 5rem;
+  width: 70%;
+  height: 80vh;
+  display: none;
+  padding-left: 5rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slides .topic {
-    height: 30%;
-    padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 30%;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .text {
-  width: 50%;
+  width: 60%;
   height: 50%;
   display: flex;
   gap: 1rem;
+}
+
+.about {
+  width: 60%;
 }
 
 .about__text {
@@ -65,15 +71,22 @@ main {
 }
 
 .hobbies__video {
-  width: 70%;
+  width: 100%;
+  height: 60vh;
   display: flex;
   flex-wrap: wrap;
-
 }
 
-.hobbies__video video {
-  width: 30%;
-  height: 48%;
+.contact__text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  width: 50%;
+  height: 40%;
   border: 1px dashed gray;
   filter: grayscale(1);
 }
@@ -90,6 +103,7 @@ video:hover {
   justify-content: center;
   position: relative;
   cursor: pointer;
+  margin: 0 1rem;
 }
 
 .card span {
@@ -164,7 +178,7 @@ video:hover {
 .photo {
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
     width: 30%;
     height: 100%;
     filter: grayscale(1);
@@ -181,6 +195,7 @@ video:hover {
   position: absolute;
   bottom: 0.5rem;
   gap: 2rem;
+  z-index: 5;
 }
 
 .current_circle {
@@ -216,4 +231,41 @@ video:hover {
   to {
         transform: translateX(0%)
     }
+}
+
+@media (max-width: 1129px) {
+  .photo {
+    width: 30%;
+    height: 70%;
+  }
+  .slides {
+    padding-left: 2rem;
+  }
+  .hobbies__video {
+    overflow-y: auto;
+  }
+  .card {
+    width: 80%;
+    gap: 0;
+  }
+}
+
+@media (max-width: 925px) {
+  .photo {
+    width: 40%;
+    height: 70%;
+  }
+  video {
+    width: 80%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .photo {
+    display: none;
+  }
+  .slides {
+    width: 100%;
+  }
 }

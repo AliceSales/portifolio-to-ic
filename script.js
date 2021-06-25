@@ -19,7 +19,7 @@ function showSlides(numberSlide) {
     }
 
     if (numberSlide < 1) {
-        slideIndex = slides.length
+        slideIndex = numberSlide
     }
 
   for (i = 0; i < slides.length; i++) {
@@ -30,7 +30,7 @@ function showSlides(numberSlide) {
       current_circle[i].className = current_circle[i].className.replace(" active", "");
   }
   
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "flex";
   current_circle[slideIndex-1].className += " active";
 }
 
