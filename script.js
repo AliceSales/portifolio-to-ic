@@ -23,34 +23,47 @@ function showSlides(numberSlide) {
     }
 
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
 
   for (i = 0; i < current_circle.length; i++) {
       current_circle[i].className = current_circle[i].className.replace(" active", "");
   }
   
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   current_circle[slideIndex-1].className += " active";
 }
 
 /* EFEITO DIGITAÇÃO */
 
-var content = "Alice Sales";
-var text = document.getElementById('text');
+const content = "Alice Sales";
+const text = document.getElementById('text');
 
-let speed = 200
-var cont = -3;
+const speed = 200
+let cont = -2;
 
-function typeWriter () {
-  if(cont < content.length){
+function typeWriter() {
+  if(cont < content.length) {
     text.textContent += content.charAt(cont);
     cont++;
     setTimeout(typeWriter, speed);
-  }else{
+  }
+  else {
     text.textContent = content;
     cont = 0;
   }
 }
 
 typeWriter()
+
+/* EFEITO NOS VIDEOS */
+
+const video = document.querySelector(".video")
+
+video.addEventListener('mouseenter', e => {
+  video.play()
+})
+
+video.addEventListener('mouseout', e => {
+  video.pause()
+})

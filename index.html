@@ -12,9 +12,9 @@
 </head>
 <body>
     <main>
-        <div class="slides translate">
+        <div class="slides translatein">
             <div class="about topic">
-                <h2>I'm</h2>
+                <h2 style="font-weight: 200;">I'm</h2>
                 <h1 style="font-weight: 500; font-family: 'Milky'; color: crimson;" id="text"></h1>
                 <h5>Front-end Engineer</h5>
             </div>
@@ -28,21 +28,66 @@
             </div>
         </div>
     
-        <div class="slides translate">
+        <div class="slides translatein">
             <div class="tecnologies topic">
-                <h2 style="font-weight: bold;">TECNOLOGIES</h2>
+                <h2>TECNOLOGIES</h2>
             </div>
             <br>
             <div class="tecnologies__text text">
-                <i class="fab fa-html5">HTML5</i>
-                <i class="fab fa-css3-alt">CSS3</i>
-                <i class="fab fa-js">JavaScript</i>
-                <i class="fab fa-react">React.js</i>
-                <i class="fab fa-git-alt">Git</i>
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fab fa-html5">HTML5</i>
+                </div>
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fab fa-css3-alt">CSS3</i>
+                </div>
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fab fa-js">JavaScript</i>
+                </div>
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fab fa-react">React.js</i>
+                </div>
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fab fa-git-alt">Git</i>
+                </div>              
+            </div>
+        </div>
+
+        <div class="slides translatein">
+            <div class="hobbies topic">
+               <h2>HOBBIES</h2>
+            </div>
+            <br>
+            <div class="hobbies__text text">
+                <div class="hobbies__video">
+                    <video src="./videos/1.mp4" loop muted class="video"></video>
+                </div>
+                <div class="hobbies__video">
+                    <video src="./videos/1.mp4" loop class="video"></video>
+                </div>
             </div>
         </div>
     
-        <div class="slides translate">
+        <div class="slides translatein">
             <div class="contact topic">
                 <h2 style="font-weight: bold;">CONTACT</h2>
             </div>
@@ -71,8 +116,9 @@
 
         <div class="circles">
             <span class="current_circle" onclick="currentSlide(1)"></span>
-            <span class="current_circle" onclick="currentSlide(2)"></span> 
-            <span class="current_circle" onclick="currentSlide(3)"></span> 
+            <span class="current_circle" onclick="currentSlide(2)"></span>
+            <span class="current_circle" onclick="currentSlide(3)"></span>
+            <span class="current_circle" onclick="currentSlide(4)"></span>  
         </div>
 
     </main>
