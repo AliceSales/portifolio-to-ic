@@ -35,7 +35,6 @@ main {
   width: 70%;
   height: 80vh;
   display: none;
-  padding-left: 5rem;
   flex-direction: column;
   align-items: center;
 }
@@ -60,6 +59,7 @@ main {
 }
 
 .about__text {
+  display: inline-block;
   line-height: 1.5rem;
 }
 
@@ -75,6 +75,7 @@ main {
   height: 60vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact__text {
@@ -84,10 +85,30 @@ main {
   justify-content: center;
 }
 
+.social-medias {
+  background: #272727;
+  width: 15%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: background, width, height, .5s;
+}
+
+.social-medias:hover {
+  background: crimson;
+  width: 16%;
+  height: 36%;
+}
+
 video {
-  width: 50%;
+  width: 40%;
   height: 40%;
-  border: 1px dashed gray;
+  border-radius: 2rem;
   filter: grayscale(1);
 }
 
@@ -167,12 +188,12 @@ video:hover {
   margin: 0 0.5rem;
 }
 
-.icons {
-  border-radius: 1rem;
-}
-
-.icons:hover {
-  filter: contrast(0.8);
+.fa-envelope:before,
+.fa-linkedin:before,
+.fa-instagram:before,
+.fa-github:before
+{
+  font-size: 2rem;
 }
 
 .photo {
@@ -238,15 +259,25 @@ video:hover {
     width: 30%;
     height: 70%;
   }
-  .slides {
-    padding-left: 2rem;
-  }
   .hobbies__video {
     overflow-y: auto;
   }
   .card {
     width: 80%;
     gap: 0;
+  }
+  .contact__text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .social-medias {
+    width: 55%;
+  }
+  .social-medias:hover {
+    width: 60%;
+  }
+  .about__text {
+    line-height: 2rem;
   }
 }
 
@@ -259,6 +290,12 @@ video:hover {
     width: 80%;
     height: 50%;
   }
+  .social-medias {
+    width: 50%;
+  }
+  .social-medias:hover {
+    width: 60%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -267,5 +304,11 @@ video:hover {
   }
   .slides {
     width: 100%;
+  }
+  .social-medias {
+    width: 50%;
+  }
+  .social-medias:hover {
+    width: 60%;
   }
 }
