@@ -11,7 +11,7 @@
   --blue: #609BFF;
   --pink: #E95D90;
 
-  --tittle: 2.5rem;
+  --tittle: 3rem;
   --border: 1rem;
 }
 
@@ -22,12 +22,25 @@
     font-family: Sen, sans-serif;
     font-weight: 700;
     color: var(--all-white);
-    font-size: .8rem;
+    font-size: .9rem;
     letter-spacing: .05em;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
 a {
@@ -59,7 +72,7 @@ nav ul li {
   height: 100%;
   display: flex;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 400;
   padding: 1.5rem;
 }
@@ -104,7 +117,7 @@ main section.home .profile img {
 }
 
 main section.home .profile >  h1 {
-  font-size: 2.3rem;
+  font-size: 2.7rem;
 }
 
 main section.home .profile .profile-name {
@@ -121,7 +134,7 @@ main section.home .profile .profile-name h1:first-child {
 }
 
 main section.home .profile h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 main section.home .apresentation {
@@ -142,7 +155,7 @@ main section.home .apresentation .information {
 }
 
 main section.home .apresentation .information h4 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: left;
 }
 
@@ -174,7 +187,7 @@ main section.about-me .container-cards .card {
 }
 
 main section.about-me .container-cards .card h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: var(--light-grey);
   height: 15vh;
 }
@@ -186,12 +199,12 @@ main section.about-me .container-cards .card .subtitle-card {
 }
 
 main section.about-me .container-cards .card .subtitle-card h4 {
-  font-size: 1.4em;
+  font-size: 1.7em;
 }
 
 main section.about-me .container-cards .card .text-card p {
   font-weight: 400;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 
 main section.projects {
@@ -237,12 +250,12 @@ main section.projects .container-projects .card-projeto .description-project {
 
 main section.projects .container-projects .card-projeto .description-project h4 {
   height: 7vh;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 main section.projects .container-projects .card-projeto .description-project p {
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
 
 footer {
@@ -287,7 +300,7 @@ footer .contato-container .contato-group img {
 }
 
 footer .contato-container .contato-group h6 {
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 1.2rem;
 }
 
@@ -304,7 +317,7 @@ footer .contato-container .contato-group a {
 }
 
 .copyright small {
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 5px;
 }
