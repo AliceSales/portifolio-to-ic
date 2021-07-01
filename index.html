@@ -12,32 +12,36 @@
     <title>Alice Sales</title>
 </head>
 <body>
-    <nav>
+    <nav class="translateintop">
         <ul>
-            <a href="#home"><li>Home</li></a>
+            <a href="#home"><li class="active">Home</li></a>
             <a href="#about"><li>Sobre mim</li></a>
             <a href="#projects"><li>Projetos</li></a>
-            <a href="#contato"><li class="active">Contato</li></a>
+            <a href="#contato"><li>Contato</li></a>
         </ul>
     </nav>
     <main>
         <section class="home" id="home">
             <div class="profile">
-                <img src="./images/photos/foto1.png" alt="Alice Sales">
-                <h1>I'm</h1>
-                <div class="profile-name">
-                    <h1>Alice</h1>
-                    <h1>Sales</h1>
+                <div class="hello translateinleft">
+                    <img src="./images/photos/foto1.png" alt="Alice Sales">
+                    <h1>I'm</h1>
+                    <div class="profile-name">
+                        <h1>Alice</h1>
+                        <h1>Sales</h1>
+                    </div>
+                    <h3>Front-End Developer</h3>
                 </div>
-                <h3>Front-End Developer</h3>
             </div>
             <div class="apresentation">
-                <h1>Portfólio de Alice Sales</h1>
-                <br>
-                <div class="information">
-                    <h4>Estudante Ciência da Computação CIN-UFPE</h4>
-                    <h4>ENFJ - Protagonista</h4>
-                    <h4>Programação, livros e ukuleles 💜</h4>
+                <div class="content-apresentation translateinright">
+                    <h1>Portfólio de Alice Sales</h1>
+                    <br>
+                    <div class="information">
+                        <h4>Estudante Ciência da Computação CIN-UFPE</h4>
+                        <h4>ENFJ - Protagonista</h4>
+                        <h4>Programação, livros e ukuleles 💜</h4>
+                    </div>
                 </div>
             </div>
         </section>
@@ -46,6 +50,10 @@
             <h4 class="tittle">Conheça um pouco sobre mim</h4>
             <div class="container-cards">
                 <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     <h1>Hobbies</h1>
                     <div class="subtitle-card">
                         <h4 style="color: var(--green);">Paixões:</h4>
@@ -60,10 +68,14 @@
                     </div>
                 </div>
                 <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     <h1>Sonhos</h1>
                     <div class="subtitle-card">
                         <h4 style="color: var(--blue);">Profissional:</h4>
-                        <h4>Front-end Developer</h4>
+                        <h4>Front-end</h4>
                     </div>
                     <div class="text-card">
                         <p>
@@ -74,6 +86,10 @@
                     </div>
                 </div>
                 <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     <h1>Skills</h1>
                     <div class="subtitle-card">
                         <h4 style="color: var(--pink);">Tecnologias:</h4>
@@ -84,10 +100,7 @@
                             Sempre me joguei em diversas áreas para poder saber um pouco de tudo, vi desde Desktop a Mobile, mas foi na Web que me encontrei. Busco sempre ter uma base sólida antes de prosseguir avançar.
                             <br>
                             Hoje minhas principais Skills são:
-                            <br>
                             HTML5, CSS3, JavaScript e Git
-                            <br>
-                            Agora, estou estudando React.
                         </p>
                     </div>
                 </div>
@@ -98,44 +111,48 @@
             <h4 class="tittle">Meus principais projetos</h4>
             <div class="container-projects">
                 <div class="card-projeto">
-                    <a href="https://maratona-discover-flax.vercel.app/" target="blank"><img src="./images/photos/dev-finance.png" alt="dev-finances"/></a>
-                    <div class="description-project">
-                        <h4>Dev Finance</h4>
-                        <p>
-                            Para começar a focar na lógica mais profundamente, fiz
-                            esse projeto durante a maratona discover da Rocketseat.
-                        </p>
-                    </div>
+                    <a href="https://maratona-discover-flax.vercel.app/" target="blank">
+                        <div class="description-project">
+                            <h4>Dev Finance</h4>
+                            <p>
+                                Para começar a focar na lógica mais profundamente, fiz
+                                esse projeto durante a maratona discover da Rocketseat.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card-projeto">
-                    <a href="https://pokedex-with-vanilla-js.vercel.app/"  target="blank"><img src="./images/photos/pokedex.png" alt="Pokedéx"/></a>
-                    <div class="description-project">
-                        <h4>Pokedéx</h4>
-                        <p>
-                            Pra começar a entender sobre API rest, fiz esse projetinho
-                            simples com requisições a uma API pública sobre Pokemons.
-                        </p>
-                    </div>
+                    <a href="https://pokedex-with-vanilla-js.vercel.app/"  target="blank">
+                        <div class="description-project">
+                            <h4>Pokedéx</h4>
+                            <p>
+                                Pra começar a entender sobre API rest, fiz esse projetinho
+                                simples com requisições a uma API pública sobre Pokemons.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card-projeto">
-                    <a href="https://moveit-five-zeta.vercel.app/" target="blank"><img src="./images/photos/move-it.png" alt="Move it"/></a>
-                    <div class="description-project">
-                        <h4>Move it</h4>
-                        <p>
-                            Projeto feito durante a NLW na trilha de React, foi meu primeiro contato com uma aplicação web usando React,
-                            aprendi bastante e apliquei bastente conceitos lógicos.
-                        </p>
-                    </div>
+                    <a href="https://moveit-five-zeta.vercel.app/" target="blank">
+                        <div class="description-project">
+                            <h4>Move it</h4>
+                            <p>
+                                Projeto feito durante a NLW na trilha de React, foi meu primeiro contato com uma aplicação web usando React,
+                                aprendi bastante e apliquei bastente conceitos lógicos.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card-projeto">
-                    <a href="https://todofrontmentor.netlify.app/" target="blank"><img src="./images/photos/to-do-list.png" alt="To-do List"/></a>
-                    <div class="description-project">
-                        <h4>To-do List</h4>
-                        <p>
-                            Para começar a me aprofundar e praticar Front-end, fiz esse
-                            To-do list que é um desafio do site Front-end Mentor.
-                        </p>
-                    </div>
+                    <a href="https://todofrontmentor.netlify.app/" target="blank">
+                        <div class="description-project">
+                            <h4>To-do List</h4>
+                            <p>
+                                Para começar a me aprofundar e praticar Front-end, fiz esse
+                                To-do list que é um desafio do site Front-end Mentor.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

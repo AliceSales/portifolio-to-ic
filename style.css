@@ -11,7 +11,6 @@
   --blue: #609BFF;
   --pink: #E95D90;
 
-  --tittle: 3rem;
   --border: 1rem;
 }
 
@@ -24,23 +23,11 @@
     color: var(--all-white);
     font-size: .9rem;
     letter-spacing: .05em;
+    cursor: default;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-
-@media (max-width: 1080px) {
-  html {
-    font-size: 93.75%;
-  }
-}
-
-@media (max-width: 720px) {
-  html {
-    font-size: 87.5%;
-  }
 }
 
 a {
@@ -65,7 +52,6 @@ nav {
 nav ul {
   height: 100%;
   display: flex;
-  gap: 2rem;
 }
 
 nav ul li {
@@ -75,10 +61,16 @@ nav ul li {
   font-size: 1rem;
   font-weight: 400;
   padding: 1.5rem;
+  transition: background-color 0.5s;
 }
 
 nav ul li:not(.active) {
   filter: brightness(0.5);
+}
+
+nav ul li:not(.active):hover {
+  background-color: var(--purple);
+  filter: brightness(1);
 }
 
 nav ul li.active {
@@ -93,13 +85,12 @@ main {
 
 main section.home {
   width: 100%;
-  height: 100vh;
   display: flex;
 }
 
 main section.home .profile {
   width: 35%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,33 +98,40 @@ main section.home .profile {
   gap: 1rem;
 }
 
-main section.home .profile img {
-  width: 10rem;
-  height: 10rem;
+main section.home .profile .hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section.home .profile .hello img {
+  width: 13rem;
+  height: 13rem;
   border: 2px solid var(--purple);
   border-radius: 50%;
   background: var(--level);
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 }
 
-main section.home .profile >  h1 {
+main section.home .profile .hello >  h1 {
   font-size: 2.7rem;
 }
 
-main section.home .profile .profile-name {
+main section.home .profile .hello .profile-name {
   display: flex;
   gap: .5rem;
 }
 
-main section.home .profile .profile-name h1 {
-  font-size: var(--tittle);
+main section.home .profile .hello .profile-name h1 {
+  font-size: 2.5rem;
 }
 
-main section.home .profile .profile-name h1:first-child {
+main section.home .profile .hello .profile-name h1:first-child {
   color: var(--purple);
 }
 
-main section.home .profile h3 {
+main section.home .profile .hello h3 {
   font-size: 1.5rem;
 }
 
@@ -144,10 +142,11 @@ main section.home .apresentation {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 main section.home .apresentation h1:first-child {
-  font-size: var(--tittle);
+  font-size: 2.5rem;
 }
 
 main section.home .apresentation .information {
@@ -163,6 +162,7 @@ main section.about-me {
   width: 100%;
   height: 100vh;
   padding: 2rem;
+  margin-bottom: 4rem;
 }
 
 main section.about-me h6 {
@@ -172,7 +172,7 @@ main section.about-me h6 {
 
 main section.about-me h4.tittle {
   height: 20vh;
-  font-size: var(--tittle);
+  font-size: 2.5rem;
 }
 
 main section.about-me .container-cards {
@@ -184,18 +184,80 @@ main section.about-me .container-cards {
 main section.about-me .container-cards .card {
   width: 40%;
   height: 100%;
+  position: relative;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main section.about-me .container-cards .card span {
+  transition: 0.5s;
+  background: white;
+}
+
+main section.about-me .container-cards .card span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+}
+
+main section.about-me .container-cards .card span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0px;
+}
+
+main section.about-me .container-cards .card span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 0px;
+}
+
+main section.about-me .container-cards .card span:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+}
+
+main section.about-me .container-cards .card:hover span:nth-child(1) {
+  width: 2rem;
+}
+
+main section.about-me .container-cards .card:hover span:nth-child(2) {
+  height: 2rem;
+}
+
+main section.about-me .container-cards .card:hover span:nth-child(3) {
+  height: 2rem;
+}
+
+main section.about-me .container-cards .card:hover span:nth-child(4) {
+  width: 2rem;
 }
 
 main section.about-me .container-cards .card h1 {
   font-size: 4rem;
   color: var(--light-grey);
   height: 15vh;
+  transition: 0.5s;
+}
+
+main section.about-me .container-cards .card:hover h1 {
+  color: #ced5dd;
 }
 
 main section.about-me .container-cards .card .subtitle-card {
-  height: 7vh;
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 main section.about-me .container-cards .card .subtitle-card h4 {
@@ -209,38 +271,35 @@ main section.about-me .container-cards .card .text-card p {
 
 main section.projects {
   width: 100%;
-  height: auto;
-  padding: 2rem;
+  height: 100vh;
+  padding: 0 2rem;
 }
 
 main section.projects h6 {
+  margin-top: 2rem;
   height: 10vh;
   color: var(--dark-grey);
 }
 
 main section.projects h4.tittle {
-  width: 60%;
+  width: 100%;
   height: 20vh;
-  font-size: var(--tittle);
+  font-size: 2.5rem;
 }
 
 main section.projects .container-projects {
   width: 100%;
-  height: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
 }
 
 main section.projects .container-projects .card-projeto {
-  width: 49%;
-  height: 100vh;
+  width: 45%;
+  height: 30vh;
   background: var(--level);
-}
-
-main section.projects .container-projects .card-projeto img {
-  width: 100%;
-  height: 75%;
 }
 
 main section.projects .container-projects .card-projeto .description-project {
@@ -258,6 +317,10 @@ main section.projects .container-projects .card-projeto .description-project p {
   line-height: 1.5rem;
 }
 
+main section.projects .container-projects .card-projeto:hover .description-project h4 {
+  color: var(--purple);
+}
+
 footer {
   height: 70vh;
   background: var(--level);
@@ -272,7 +335,7 @@ footer .contato-tittle {
 
 footer .contato-tittle h1 {
   height: 15vh;
-  font-size: var(--tittle);
+  font-size: 2.5rem;
 }
 
 footer .contato-tittle h4 {
@@ -306,6 +369,11 @@ footer .contato-container .contato-group h6 {
 
 footer .contato-container .contato-group a {
   color: var(--light-grey);
+  transition: color .5s;
+}
+
+footer .contato-container .contato-group a:hover {
+  color: #ced5dd;
 }
 
 .copyright {
@@ -326,6 +394,158 @@ footer .contato-container .contato-group a {
   width: 3rem;
   height: 3rem;
   position: fixed;
-  right: 2rem;
-  bottom: 2rem;
+  bottom: 5%;
+  right: 5%;
+}
+
+/*ANIMAÇÕES*/
+
+.translateinleft {
+  animation-name: translatein;
+  animation-duration: 1.5s;
+}
+
+@keyframes translatein {
+  from {
+        transform: translateX(-155%)
+    } 
+  to {
+        transform: translateX(0%)
+    }
+}
+
+.translateinright {
+  animation-name: translateinright;
+  animation-duration: 1.5s;
+}
+
+@keyframes translateinright {
+  from {
+        transform: translateX(155%)
+    } 
+  to {
+        transform: translateX(0%)
+    }
+}
+
+.translateintop {
+  animation-name: translateintop;
+  animation-duration: 1.5s;
+}
+
+@keyframes translateintop {
+  from {
+        transform: translateY(-100%)
+    } 
+  to {
+        transform: translateX(0%)
+    }
+}
+
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    font-size: 80.5%;
+  }
+  nav {
+    padding: .75rem;
+  }
+  main section.about-me {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 70.5%;
+  }
+  main section.about-me .container-cards {
+    gap: 0;
+  }
+}
+
+@media (max-width: 654px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  section.home {
+    align-items: center;
+    height: 200vh;
+  }
+  main section.home .profile {
+    width: 100%;
+  }
+  main section.home .apresentation {
+    width: 100%;
+    height: 100vh;
+  }
+  .click-to-top {
+    left: 5%;
+    bottom: 10%;
+    width: 3rem;
+    height: 3rem;
+  }
+  main section.about-me {
+    height: 145vh;
+  }
+  main section.about-me .container-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  main section.about-me .container-cards .card {
+    width: 90%;
+  }
+  main section.projects {
+    height: 180vh;
+  }
+  main section.projects .container-projects {
+    flex-direction: column;
+  }
+  main section.projects .container-projects .card-projeto {
+    width: 90%;
+  }
+  footer {
+    height: 150vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .contato-container .contato-group {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    height: 25vh;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    position: relative;
+    justify-content: center;
+    background: var(--level);
+    margin-right: 0;
+  }
+  main section.about-me {
+    height: 155vh;
+  }
+  main section.home .apresentation h1:first-child {
+    font-size: 2rem;
+  }
+  main section.home .apresentation .information h4 {
+    font-size: 1rem;
+  }
 }
