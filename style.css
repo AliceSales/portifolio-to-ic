@@ -428,20 +428,6 @@ footer .contato-container .contato-group a:hover {
     }
 }
 
-.translateintop {
-  animation-name: translateintop;
-  animation-duration: 1.5s;
-}
-
-@keyframes translateintop {
-  from {
-        transform: translateY(-100%)
-    } 
-  to {
-        transform: translateX(0%)
-    }
-}
-
 
 @media (max-width: 1080px) {
   html {
@@ -465,9 +451,6 @@ footer .contato-container .contato-group a:hover {
   html {
     font-size: 70.5%;
   }
-  main section.about-me .container-cards {
-    gap: 0;
-  }
 }
 
 @media (max-width: 654px) {
@@ -483,14 +466,14 @@ footer .contato-container .contato-group a:hover {
   }
   section.home {
     align-items: center;
-    height: 200vh;
   }
   main section.home .profile {
     width: 100%;
+    height: 80vh;
   }
   main section.home .apresentation {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
   }
   .click-to-top {
     left: 5%;
@@ -500,6 +483,9 @@ footer .contato-container .contato-group a:hover {
   }
   main section.about-me {
     height: 145vh;
+  }
+  main section.about-me {
+    height: 150vh;
   }
   main section.about-me .container-cards {
     flex-direction: column;
@@ -540,7 +526,7 @@ footer .contato-container .contato-group a:hover {
     margin-right: 0;
   }
   main section.about-me {
-    height: 155vh;
+    height: 170vh;
   }
   main section.home .apresentation h1:first-child {
     font-size: 2rem;
