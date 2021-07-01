@@ -8,124 +8,170 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Alice Sales">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/assets/favicon-32x32.png">
     <title>Alice Sales</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>Sobre mim</li></a>
+            <a href="#projects"><li>Projetos</li></a>
+            <a href="#contato"><li class="active">Contato</li></a>
+        </ul>
+    </nav>
     <main>
-        <div class="slides translatein">
-            <div class="about topic">
-                <h2 style="font-weight: 200;">I'm</h2>
-                <h1 style="font-weight: 500; font-family: 'Milky'; color: crimson;" id="text"></h1>
-                <h5>Front-end Engineer</h5>
+        <section class="home" id="home">
+            <div class="profile">
+                <img src="./images/photos/foto1.png" alt="Alice Sales">
+                <h1>I'm</h1>
+                <div class="profile-name">
+                    <h1>Alice</h1>
+                    <h1>Sales</h1>
+                </div>
+                <h3>Front-End Developer</h3>
             </div>
-            <br>
-            <br>
-            <br>
-            <div class="about__text text">
-                <p>
-                    Técnica em informática.
-                    <br>
-                    Graduanda em Ciência da Computação - CIN UFPE.
-                    <br>
-                    Apaixonada por programação, ukuleles e livros...
-                    <br>
-                    Sigo estudando para me tornar uma desenvolvedora Front End.
-                </p>
+            <div class="apresentation">
+                <h1>Portfólio de Alice Sales</h1>
+                <br>
+                <div class="information">
+                    <h4>Estudante Ciência da Computação CIN-UFPE</h4>
+                    <h4>ENFJ - Protagonista</h4>
+                    <h4>Programação, livros e ukuleles 💜</h4>
+                </div>
             </div>
-        </div>
-    
-        <div class="slides translatein">
-            <div class="tecnologies topic">
-                <h2>TECNOLOGIES</h2>
-            </div>
-            <br>
-            <div class="tecnologies__text text">
+        </section>
+        <section class="about-me" id="about">
+            <h6>SOBRE MIM</h6>
+            <h4 class="tittle">Conheça um pouco sobre mim</h4>
+            <div class="container-cards">
                 <div class="card">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="fab fa-html5">HTML5</i>
+                    <h1>Hobbies</h1>
+                    <div class="subtitle-card">
+                        <h4 style="color: var(--green);">Paixões:</h4>
+                        <h4>Ukuleles and Books</h4>
+                    </div>
+                    <div class="text-card">
+                        <p>
+                            Sempre me interessei por música e livros, graças ao incentivo de parentes e amigos em 2020 investi nas minhas maiores paixões...
+                            <br>
+                            Graças a isso atingi recordes pessoais de ler 30 livros no ano e aprender a tocar ukulele.
+                        </p>
+                    </div>
                 </div>
                 <div class="card">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="fab fa-css3-alt">CSS3</i>
+                    <h1>Sonhos</h1>
+                    <div class="subtitle-card">
+                        <h4 style="color: var(--blue);">Profissional:</h4>
+                        <h4>Front-end Developer</h4>
+                    </div>
+                    <div class="text-card">
+                        <p>
+                            Comecei a me interessar por programação durante o início do ensino médio, desde então esperimentei diversas áreas para encontrar a que me cativava mais.
+                            <br>
+                            Em 2021, conheci o instagram @papodedev da Isa e me apaixonei pelo front-end, sigo estudando para seguir carreira nessa área.
+                        </p>
+                    </div>
                 </div>
                 <div class="card">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="fab fa-js">JAVASCRIPT</i>
+                    <h1>Skills</h1>
+                    <div class="subtitle-card">
+                        <h4 style="color: var(--pink);">Tecnologias:</h4>
+                        <h4>Web</h4>
+                    </div>
+                    <div class="text-card">
+                        <p>
+                            Sempre me joguei em diversas áreas para poder saber um pouco de tudo, vi desde Desktop a Mobile, mas foi na Web que me encontrei. Busco sempre ter uma base sólida antes de prosseguir avançar.
+                            <br>
+                            Hoje minhas principais Skills são:
+                            <br>
+                            HTML5, CSS3, JavaScript e Git
+                            <br>
+                            Agora, estou estudando React.
+                        </p>
+                    </div>
                 </div>
-                <div class="card">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="fab fa-react">REACT.JS</i>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h6>MY PROJECTS</h6>
+            <h4 class="tittle">Meus principais projetos</h4>
+            <div class="container-projects">
+                <div class="card-projeto">
+                    <a href="https://maratona-discover-flax.vercel.app/" target="blank"><img src="./images/photos/dev-finance.png" alt="dev-finances"/></a>
+                    <div class="description-project">
+                        <h4>Dev Finance</h4>
+                        <p>
+                            Para começar a focar na lógica mais profundamente, fiz
+                            esse projeto durante a maratona discover da Rocketseat.
+                        </p>
+                    </div>
                 </div>
-                <div class="card">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="fab fa-git-alt">GIT</i>
-                </div>              
+                <div class="card-projeto">
+                    <a href="https://pokedex-with-vanilla-js.vercel.app/"  target="blank"><img src="./images/photos/pokedex.png" alt="Pokedéx"/></a>
+                    <div class="description-project">
+                        <h4>Pokedéx</h4>
+                        <p>
+                            Pra começar a entender sobre API rest, fiz esse projetinho
+                            simples com requisições a uma API pública sobre Pokemons.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-projeto">
+                    <a href="https://moveit-five-zeta.vercel.app/" target="blank"><img src="./images/photos/move-it.png" alt="Move it"/></a>
+                    <div class="description-project">
+                        <h4>Move it</h4>
+                        <p>
+                            Projeto feito durante a NLW na trilha de React, foi meu primeiro contato com uma aplicação web usando React,
+                            aprendi bastante e apliquei bastente conceitos lógicos.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-projeto">
+                    <a href="https://todofrontmentor.netlify.app/" target="blank"><img src="./images/photos/to-do-list.png" alt="To-do List"/></a>
+                    <div class="description-project">
+                        <h4>To-do List</h4>
+                        <p>
+                            Para começar a me aprofundar e praticar Front-end, fiz esse
+                            To-do list que é um desafio do site Front-end Mentor.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="slides translatein">
-            <div class="hobbies topic">
-               <h2>HOBBIES</h2>
-            </div>
-            <div class="hobbies__video">
-                <video src="./videos/1.mp4" loop class="video"></video>
-                <video src="./videos/1.mp4" loop class="video"></video>
-                <video src="./videos/1.mp4" loop class="video"></video>
-                <video src="./videos/1.mp4" loop class="video"></video>
-            </div>
-        </div>
-    
-        <div class="slides translatein">
-            <div class="contact topic">
-                <h2 style="font-weight: bold;">CONTACT</h2>
-            </div>
-            <br>
-            <div class="contact__text text">
-                <a href="mailto:programmeralice@gmail.com" class="social-medias">
-                    <i class="far fa-envelope"></i>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/alice-sales-8a0a26200/" class="social-medias">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                
-                <a href="https://www.instagram.com/katespinhos/" class="social-medias">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <a href="https://github.com/AliceSales" class="social-medias">
-                    <i class="fab fa-github"></i>
-                </a>
-
-            </div>
-        </div>
-
-        <img src="./images/foto1.png" alt="Alice Sales" class="photo">
-
-        <div class="circles">
-            <span class="current_circle" onclick="currentSlide(1)"></span>
-            <span class="current_circle" onclick="currentSlide(2)"></span>
-            <span class="current_circle" onclick="currentSlide(3)"></span>
-            <span class="current_circle" onclick="currentSlide(4)"></span>  
-        </div>
+        </section>
     </main>
-
-    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <footer id="contato">
+        <div class="contato-tittle">
+            <h1>Contato</h1>
+            <h4>Entre em contato comigo!</h4>
+        </div>
+        <div class="contato-container">
+            <div class="contato-group">
+                <img src="./images/assets/gmail.png" alt="gmail">
+                <h6>Gmail</h6>
+                <a href="mailto:avss2@cin.ufpe.br">avss2@cin.ufpe.br</a>
+            </div>
+            <div class="contato-group">
+                <img src="./images/assets/linkedin.png" alt="linkedin">
+                <h6>Linkedin</h6>
+                <a href="https://www.linkedin.com/in/alice-sales-8a0a26200/">https://www.linkedin.com/in/alice-sales</a>
+            </div>
+            <div class="contato-group">
+                <img src="./images/assets/github.png" alt="github">
+                <h6>GitHub</h6>
+                <a href="https://github.com/AliceSales">https://github.com/AliceSales</a>
+            </div>
+            <div class="contato-group">
+                <img src="./images/assets/smartphone.png" style="width: 1.8rem;" alt="smartphone">
+                <h6>Phone</h6>
+                <a href="#">(81) 9 8122-1492</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <small>Projeto criado para a disciplina de Introdução a Computação</small>
+        </div>
+    </footer>
+    <a href="#home"><img src="./images/assets/top-img.png" class="click-to-top" alt="click-to-top"></a>
     <script src="script.js"></script>
 </body>
 </html>
